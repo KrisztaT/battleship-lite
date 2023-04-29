@@ -13,14 +13,15 @@ class GameBoard {
       Array(cols).fill(0));
   }
 
+  
   createGameBoard() {
-    const gameBoard = document.getElementById("gameBoard");
+    const gameBoard = document.getElementById("game-board");
 
     for (let j = 0; j <= this._cols; j++) {
       const headerCell = document.createElement("div");
       headerCell.classList.add("header-cell");
       if (j > 0) {
-        headerCell.textContent = String.fromCharCode(64 + j);
+        headerCell.textContent = String.fromCharCode(64 + j); 
       }
       gameBoard.appendChild(headerCell);
     }
@@ -70,13 +71,28 @@ class GameBoard {
             if (!this.checkAnyShipsAlive()){
               message.classList.remove("hit")
               message.classList.add("celebrate")
-              message.textContent = " Congratulations! All ships are destroyed! Game over."
+              message.textContent = "Congratulations! All ships are destroyed! Game over."
+              this.restartGame()
             }
           }
         }
       }
     }
-  
+
+
+  restartGame() {
+    const restartButton = document.createElement("button");
+    restartButton.textContent = "restart";
+    restartButton.classList.add("restart-button");
+    message.appendChild(restartButton)
+    restartButton.addEventListener("click", () =>{
+      setTimeout(function() {
+        window.location.reload();
+      }, 2000);
+    })
+  }
+
+
   checkAnyShipsAlive(){
     for (let ship of this._ships){
       if (ship.isAlive){

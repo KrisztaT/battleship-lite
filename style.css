@@ -68,10 +68,14 @@ h1 {
     padding: 10px 20px;
     border-radius: 10px;
     animation: fade-in 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
  #message.hit {
-    background-color: #00cc00;
+    background-color: #FF4747;
   }
   
   @keyframes celebrate {
@@ -95,4 +99,28 @@ h1 {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
+
+.restart-button{
+    background-color: #85C7DE;
+    color: #040f1b;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    width: 160px;
+}
+
+.restart-button:hover {
+  background-color: #f1f1f1;
+  color: #004c99;
+}
+
+.restart-button:active {
+  background-color: #e7e7e7;
+  color: #003366;
+}
   
