@@ -67,11 +67,12 @@ class GameBoard {
             message.textContent = `Direct hit on a ${ship.shipType}! It still has ${ship.life} life remaining.`
             
           }else{
+            message.classList.add("hit")
             message.textContent = `Good job! You have sunk the ${ship.shipType}.`}
             if (!this.checkAnyShipsAlive()){
               message.classList.remove("hit")
               message.classList.add("celebrate")
-              message.textContent = "Congratulations! All ships are destroyed! Game over."
+              message.textContent = "Congratulations! All ships are destroyed!"
               this.restartGame()
             }
           }
@@ -81,10 +82,13 @@ class GameBoard {
 
 
   restartGame() {
+    const msgContainer = document.getElementById("message-container")
+
     const restartButton = document.createElement("button");
+    msgContainer.appendChild(restartButton)
     restartButton.textContent = "restart";
     restartButton.classList.add("restart-button");
-    message.appendChild(restartButton)
+    
     restartButton.addEventListener("click", () =>{
       setTimeout(function() {
         window.location.reload();
@@ -155,6 +159,7 @@ class GameBoard {
 
       this.placeShip(ship, result);
     }
+    console.log(this._hiddenGameBoard)
   }
 }
 

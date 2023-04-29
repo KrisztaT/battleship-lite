@@ -4,20 +4,27 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(./img/sea_2.jpg);
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #0E131F;
 }
 
+.container{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+}
+
+
 h1 {
-    text-align: center;
-    font-family: Arial, sans-serif; 
-    font-weight: bold; 
-    font-size: 36px; 
-    color: #DDFFF7;
-    text-shadow: 2px 2px 5px #333;
-    width: 50%;
+  color: #31A8EA;
+  font-size: 4rem;
+ 
+}
+
+#message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-board {
@@ -26,7 +33,7 @@ h1 {
     grid-template-rows: 40px repeat(10, 1fr);
     gap: 1px;
     max-width: 580px;
-    margin: 0 auto;
+    margin: 20px 12.5%;
     padding: 2px;
     border: 3px solid #050538;
     border-radius: 5px;
@@ -58,51 +65,50 @@ h1 {
     background-image: url(./img/sea.jpg);
   }
 
+  
   #message {
     font-family: Arial, sans-serif;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
     color: #fff;
-    background-color: #0066cc;
+    background-color: #31A8EA;
     padding: 10px 20px;
     border-radius: 10px;
     animation: fade-in 0.5s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   
  #message.hit {
     background-color: #FF4747;
   }
   
-  @keyframes celebrate {
+  #message.celebrate {
+    background-color: #0E131F;
+    color: #FFFFFF;
+    font-size: 48px;
+    text-shadow: 0 0 10px #5fb1db, 0 0 20px #5fb1db, 0 0 30px #5fb1db, 0 0 40px #5fb1db;
+    animation: pop 1.5s ease-in-out infinite;
+  }
+
+ 
+  @keyframes pop {
     0% {
-      background-color: #15B097;
+      text-shadow: 0 0 10px #7DE2D1, 0 0 20px #7DE2D1, 0 0 30px #7DE2D1, 0 0 40px #7DE2D1;
     }
-    25% {
-      background-color: #71F79F;
+    25%{
+      text-shadow: 0 0 10px #5fb1db, 0 0 20px #5fb1db, 0 0 30px #5fb1db, 0 0 40px #5fb1db;
     }
     50% {
-      background-color: #71F79F;
+      text-shadow: 0 0 20px #E9E572, 0 0 30px #E9E572, 0 0 40px #E9E572, 0 0 50px #E9E572;
     }
-    100% {
-      background-color: #2EC4B6;
+    75% {
+      text-shadow: 0 0 10px #F2BEFC, 0 0 20px #F2BEFC, 0 0 30px #F2BEFC, 0 0 40px #F2BEFC;
     }
-  }
-  
-  #message.celebrate {
-    animation-name: celebrate;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
   }
 
 .restart-button{
-    background-color: #85C7DE;
-    color: #040f1b;
+    background-color: #31A8EA;
+    color: black;
     padding: 10px 20px;
     font-size: 24px;
     font-weight: 700;
@@ -115,12 +121,6 @@ h1 {
 }
 
 .restart-button:hover {
-  background-color: #f1f1f1;
-  color: #004c99;
-}
-
-.restart-button:active {
-  background-color: #e7e7e7;
-  color: #003366;
+  background-color: #265782;
 }
   
