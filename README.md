@@ -14,9 +14,9 @@ Note: This Battleship Lite game is updated from my prior Python based terminal a
 
 ## Screenshots
 
-.[Game start](./img/game_start.png)
-.[Game play](./img/game_play.png)
-.[Game end](./img/game_end.png)
+![Game start](./img/game_start.png)
+![Game play](./img/game_play.png)
+![Game end](./img/game_end.png)
 
 ## Contributing
 
