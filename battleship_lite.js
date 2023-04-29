@@ -86,7 +86,7 @@ class GameBoard {
 
     const restartButton = document.createElement("button");
     msgContainer.appendChild(restartButton)
-    restartButton.textContent = "restart";
+    restartButton.textContent = "Restart";
     restartButton.classList.add("restart-button");
     
     restartButton.addEventListener("click", () =>{

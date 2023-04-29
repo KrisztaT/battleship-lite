@@ -10,4 +10,18 @@ Battleship Lite is a single-player game that utilises a 10x10 grid map. The game
 
 The ships in the game cannot overlap, extend beyond the boundaries of the map, and are concealed from the player. Once the game map and ship placement are set, the player can begin searching for the hidden ships by taking aim and firing at a target. The game provides real-time feedback both visually on the map and via textual information displayed below it, indicating the outcome of each shot, such as which ship was hit, how much life it has remaining, or if it has been sunk or missed in a previous attempt.
 
-Note: This Battleship Lite game is updated from my prior Python based terminal app and is now built using HTML, CSS, and JavaScript. While still in development, the current uploaded version of the game is fully functional and playable.
+Note: This Battleship Lite game is updated from my prior Python based terminal app and is now built using HTML, CSS, and JavaScript.
+
+## Screenshots
+
+.[Game start](./img/game_start.png)
+.[Game play](./img/game_play.png)
+.[Game end](./img/game_end.png)
+
+## Contributing
+
+If you find any issues with this project or would like to contribute to its development, feel free to open a pull request or submit an issue on the project's GitHub page.
+
+## License
+
+This project is licensed under the MIT License.
