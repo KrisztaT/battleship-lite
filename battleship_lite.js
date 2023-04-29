@@ -16,7 +16,21 @@ class GameBoard {
   createGameBoard() {
     const gameBoard = document.getElementById("gameBoard");
 
+    for (let j = 0; j <= this._cols; j++) {
+      const headerCell = document.createElement("div");
+      headerCell.classList.add("header-cell");
+      if (j > 0) {
+        headerCell.textContent = String.fromCharCode(64 + j);
+      }
+      gameBoard.appendChild(headerCell);
+    }
+  
     for (let i = 0; i < this._rows; i++) {
+      const headerCell = document.createElement("div");
+      headerCell.classList.add("header-cell");
+      headerCell.textContent = i + 1;
+      gameBoard.appendChild(headerCell);
+  
       for (let j = 0; j < this._cols; j++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
@@ -54,7 +68,8 @@ class GameBoard {
           }else{
             message.textContent = `Good job! You have sunk the ${ship.shipType}.`}
             if (!this.checkAnyShipsAlive()){
-              
+              message.classList.remove("hit")
+              message.classList.add("celebrate")
               message.textContent = " Congratulations! All ships are destroyed! Game over."
             }
           }
