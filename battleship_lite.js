@@ -72,6 +72,7 @@ class GameBoard {
             if (!this.checkAnyShipsAlive()){
               message.classList.remove("hit")
               message.classList.add("celebrate")
+              this.runContinuousConfetti()
               message.textContent = "Congratulations! All ships are destroyed!"
               this.restartGame()
             }
@@ -79,6 +80,20 @@ class GameBoard {
         }
       }
     }
+
+  runContinuousConfetti() {
+    const jsConfetti = new JSConfetti();
+
+    jsConfetti.addConfetti();
+  
+    const continuousConfetti = setInterval(() => {
+      jsConfetti.addConfetti();
+    }, 1000);
+  
+    setTimeout(() => {
+      clearInterval(continuousConfetti);
+    }, 20000);
+  }
 
 
   restartGame() {
@@ -92,7 +107,7 @@ class GameBoard {
     restartButton.addEventListener("click", () =>{
       setTimeout(function() {
         window.location.reload();
-      }, 2000);
+      },2000);
     })
   }
 

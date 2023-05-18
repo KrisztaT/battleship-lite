@@ -18,9 +18,6 @@ Note: This Battleship Lite game is updated from my prior Python based terminal a
 ![Game play](./img/game_play.png)
 ![Game end](./img/game_end.png)
 
-## Contributing
-
-If you find any issues with this project or would like to contribute to its development, feel free to open a pull request or submit an issue on the project's GitHub page.
 
 ## License
 
